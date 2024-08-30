@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useOnlineStatus } from "./useOnlineStatus.js";
 
 function StatusBar() {
@@ -11,6 +12,10 @@ function SaveButton() {
   function handleSaveClick() {
     console.log("✅ Progress saved");
   }
+
+  useEffect(() => {
+    console.log("rerender save button");
+  });
 
   return (
     <button disabled={!isOnline} onClick={handleSaveClick}>

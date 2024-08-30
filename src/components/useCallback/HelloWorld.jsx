@@ -2,7 +2,7 @@ import { memo, useEffect } from "react";
 
 const HelloWorld = memo(({ helloWorldHandler }) => {
   useEffect(() => {
-    console.log("rerender");
+    console.log("rerender component hello world");
   });
   return (
     <>
